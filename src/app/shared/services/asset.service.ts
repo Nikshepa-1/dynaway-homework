@@ -13,7 +13,7 @@ export class AssetService {
   constructor() {
   }
 
-  getAll(): Observable<Asset[]> {
+  getAll(): Observable<any> {
     return of(mockAssetHttpResponse).pipe(
       delay(getRandomInt(1000) + 500), // fake random http delay,
       tap(() => { // a small chance for the data fetch to error
