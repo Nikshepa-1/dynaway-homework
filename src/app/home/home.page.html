@@ -20,4 +20,13 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+  
+  <ion-alert
+    [isOpen]="showError"
+    header="ERROR"
+    subHeader="Application Temporarily Unvailable"
+    message="Please try again after some time"
+    [buttons]="alertButtons"
+    (didDismiss)="setOpen(false)"
+  ></ion-alert>
 </ion-content>
